@@ -46,7 +46,7 @@ module.exports = {
                 700: 'hsl(352, 90%, 35%)',
                 800: 'hsl(350, 94%, 28%)',
                 900: 'hsl(348, 94%, 20%)',
-                910: '#EE00FF', // Login Page Header Color
+                905: '#CE4227', // Smaller Header Color
             },
             yellow: {
                 50: 'hsl(49, 100%, 96%)',
@@ -90,6 +90,7 @@ module.exports = {
         extend: {
             fontSize: {
                 '2xs': '0.625rem',
+                '18': '18px',
             },
             spacing: {
                 '35': '35.813rem',

@@ -77,22 +77,23 @@ export default () => {
                     css={tw`w-full flex`}
                 >
                 <div css={tw`pb-2 flex justify-center`}>
-                <h1 css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
+                <h1 className="roboto condensed text24" css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
                 </div>
                 <div css={tw`pb-2 flex justify-center`}>
-                <p css={tw`w-full text-sm text-center text-red-600`}>Request a password reset for your account</p>
+                <p className="roboto condensed text16" css={tw`w-full text-sm text-center text-red-905`}>Request a password reset for your account</p>
                 </div>
                 <div css={tw`pb-6 flex justify-center`}>
-                <p css={tw`w-full text-xs text-center text-white`}>Enter the email address associated with your accountto receive instructions on how to reset your password.</p>
+                <p className="text14 bold" css={tw`w-full text-xs text-center text-white`}>Enter the email address associated with your accountto receive instructions on how to reset your password.</p>
                 </div>
                 <div css={tw`pb-2 flex justify-center`}>
-                <p css={tw`w-full text-xs text-center text-white`}>Make sure to check your spam box!</p>
+                <p className="text14 bold" css={tw`w-full text-xs text-center text-white`}>Make sure to check your spam box!</p>
                 </div>
                     <Field
                         light
+                        className="text18"
                         css={tw`h-41`}
                         placeholder={'> enter your email address...'}
-                        label={'Email'}
+                        label={'[i] Email Address'}
                         name={'email'}
                         type={'email'}
                     />
@@ -103,7 +104,7 @@ export default () => {
                             disabled={isSubmitting}
                             isLoading={isSubmitting}
                         >
-                            Send Email
+                          <span className="bold condensed text24">[i] SEND EMAIL</span>
                         </Button>
                     </div>
                     {recaptchaEnabled &&

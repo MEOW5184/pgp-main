@@ -45,7 +45,7 @@ export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => 
           to={'/auth/password'}
           css={tw`no-underline text-white hover:text-neutral-300`}
         >
-          [i] Click here if you forgot your password :/
+          <span className="text14">[i] Click here if you forgot your password :/</span>
             </Link>
       }
       {location.pathname.startsWith('/auth/password') &&
@@ -53,7 +53,7 @@ export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => 
           to={'/auth/login'}
           css={tw`no-underline text-white hover:text-neutral-300`}
         >
-          [i] Click here to return back to the login page
+        <span className="text14">[i] Click here to return back to the login page</span>
               </Link>
       }
     </p>
@@ -61,7 +61,7 @@ export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => 
       <img src="https://media.discordapp.net/attachments/596792232313487360/853498688185565184/unknown.png" />
     </div>
     <p css={tw`text-center text-neutral-500 text-xs mt-4`}>
-      <p css={tw`no-underline text-neutral-500`}>
+      <p className="text12" css={tw`no-underline text-neutral-500`}>
         © 2021 Game Hosting - Private Game Panel - Pterodactyl Software
           </p>
     </p>

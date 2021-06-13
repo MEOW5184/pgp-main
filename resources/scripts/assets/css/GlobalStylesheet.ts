@@ -88,4 +88,29 @@ export default createGlobalStyle`
       audio, canvas, embed, iframe, img, object, svg, video {
         display: inline;
       }
+
+      .text24 {
+      	font-size: 24px;
+      }
+
+      .text16 {
+      	font-size: 16px;
+      }
+
+      .codensed {
+      	font-stretch: condensed !important;
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .roboto {
+      	font-family: roboto;
+      }
+
+      .text14 {
+      	font-size: 14px;
+      }
+
 `;

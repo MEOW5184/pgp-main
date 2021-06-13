@@ -76,27 +76,29 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
             {({ isSubmitting, setSubmitting, submitForm }) => (
                 <LoginFormContainer title={''} css={tw`w-full flex`}>
                 <div css={tw`pb-2 flex justify-center`}>
-                <h1 css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
+                <h1 className="roboto condensed text24" css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
                 </div>
                 <div css={tw`pb-6 flex justify-center`}>
-                <p css={tw`w-full text-sm text-center text-red-600`}>Login to the Private Game Panel (PGP)</p>
+                <p className="roboto condensed text16" css={tw`w-full text-sm text-center text-red-905`}>Login to the Private Game Panel (PGP)</p>
                 </div>
                     <Field
                         light
                         css={tw`h-41`}
+                        className="text18"
                         placeholder={'> enter your email address...'}
                         type={'text'}
-                        label={'Username or Email'}
+                        label={'[i] Email Address'}
                         name={'username'}
                         disabled={isSubmitting}
                     />
                     <div css={tw`mt-6`}>
                         <Field
                             light
+                            className="text18"
                             css={tw`h-41`}
                             placeholder={'> enter your password...'}
                             type={'password'}
-                            label={'Password'}
+                            label={'[i] Password'}
                             name={'password'}
                             disabled={isSubmitting}
                         />
@@ -104,7 +106,7 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                   <div css={tw`w-full flex justify-center`}>
                     <div className="LoginButton" css={tw`w-35 mt-6`}>
                         <Button type={'submit'} size={'xlarge'} isLoading={isSubmitting} disabled={isSubmitting}>
-                            [i] LOGIN TO PGP
+                          <span className="bold condensed text24">[i] LOGIN TO PGP</span>
                         </Button>
                     </div>
                   </div>
