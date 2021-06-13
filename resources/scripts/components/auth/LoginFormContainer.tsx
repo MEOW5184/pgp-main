@@ -30,11 +30,11 @@ const Container = styled.div`
 `;
 
 export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => (
-  <Container css={tw`mt-16`}>
+  <Container css={tw`mt-4`}>
     <FlashMessageRender css={tw`mb-2 px-1`} />
     <Form {...props} ref={ref}>
       <div css={tw`md:flex w-full bg-transparent rounded-lg p-6 mx-1`}>
-        <div css={tw`flex-1`}>
+        <div css={tw`w-35 flex-1`}>
           {props.children}
         </div>
       </div>

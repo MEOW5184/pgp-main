@@ -72,26 +72,23 @@ export default () => {
             })}
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
-                <LoginFormContainer
-                    title={'Request Password Reset'}
-                    css={tw`w-full flex`}
-                >
-                <div css={tw`pb-2 flex justify-center`}>
+                <LoginFormContainer css={tw`w-full flex`}>
+                <div css={tw`w-35 pb-2 flex justify-center`}>
                 <h1 className="roboto condensed text24" css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
                 </div>
-                <div css={tw`pb-2 flex justify-center`}>
+                <div css={tw`w-35 pb-2 flex justify-center`}>
                 <p className="roboto condensed text16" css={tw`w-full text-sm text-center text-red-905`}>Request a password reset for your account</p>
                 </div>
-                <div css={tw`pb-6 flex justify-center`}>
+                <div css={tw`w-35 pb-3 flex justify-center`}>
                 <p className="text14 bold" css={tw`w-full text-xs text-center text-white`}>Enter the email address associated with your accountto receive instructions on how to reset your password.</p>
                 </div>
-                <div css={tw`pb-2 flex justify-center`}>
+                <div css={tw`w-35 pb-5 flex justify-center`}>
                 <p className="text14 bold" css={tw`w-full text-xs text-center text-white`}>Make sure to check your spam box!</p>
                 </div>
                     <Field
                         light
                         className="text18"
-                        css={tw`h-41`}
+                        css={tw`h-41 w-35`}
                         placeholder={'> enter your email address...'}
                         label={'[i] Email Address'}
                         name={'email'}

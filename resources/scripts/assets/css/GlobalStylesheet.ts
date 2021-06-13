@@ -112,5 +112,4 @@ export default createGlobalStyle`
       .text14 {
       	font-size: 14px;
       }
-
 `;
