@@ -69,4 +69,23 @@ export default createGlobalStyle`
     ::-webkit-scrollbar-corner {
         background: transparent;
     }
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .LoginButton {
+      	width: 50% !important;
+      	}
+      }
+
+      audio, canvas, embed, iframe, img, object, svg, video {
+        display: inline;
+      }
 `;

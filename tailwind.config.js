@@ -1,9 +1,9 @@
 module.exports = {
     theme: {
         fontFamily: {
-            sans: [ 'Rubik', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', '"Roboto"', 'system-ui', 'sans-serif' ],
-            header: [ '"IBM Plex Sans"', '"Roboto"', 'system-ui', 'sans-serif' ],
-            mono: [ '"IBM Plex Mono"', '"Source Code Pro"', 'SourceCodePro', 'Menlo', 'Monaco', 'Consolas', 'monospace' ],
+            sans: [ 'Cascadia Mono', '-apple-system', 'BlinkMacSystemFont', '"Helvetica Neue"', '"Roboto"', 'system-ui', 'sans-serif' ],
+            header: [ '"Cascadia Mono"', '"Roboto"', 'system-ui', 'sans-serif' ],
+            mono: [ '"Cascadia Mono"', '"Source Code Pro"', 'SourceCodePro', 'Menlo', 'Monaco', 'Consolas', 'monospace' ],
         },
         colors: {
             transparent: 'transparent',
@@ -30,8 +30,10 @@ module.exports = {
                 500: 'hsl(211, 12%, 43%)',
                 600: 'hsl(209, 14%, 37%)',
                 700: 'hsl(209, 18%, 30%)',
-                800: 'hsl(209, 20%, 25%)',
+                800: '#1B1F21', // Background Color
                 900: 'hsl(210, 24%, 16%)',
+                910: '#333333', // Main Button Border Color
+                915: '#373D44', // Text Input Background Color
             },
             red: {
                 50: 'hsl(360, 100%, 95%)',
@@ -44,6 +46,7 @@ module.exports = {
                 700: 'hsl(352, 90%, 35%)',
                 800: 'hsl(350, 94%, 28%)',
                 900: 'hsl(348, 94%, 20%)',
+                910: '#EE00FF', // Login Page Header Color
             },
             yellow: {
                 50: 'hsl(49, 100%, 96%)',
@@ -56,6 +59,8 @@ module.exports = {
                 700: 'hsl(29, 80%, 44%)',
                 800: 'hsl(22, 82%, 39%)',
                 900: 'hsl(15, 86%, 30%)',
+                910: 'rgba(253, 236, 186, 45%)', // Main Button Color
+                915 : '#FDECBA', // Button Text Color
             },
             cyan: {
                 50: 'hsl(171, 82%, 94%)',
@@ -85,6 +90,10 @@ module.exports = {
         extend: {
             fontSize: {
                 '2xs': '0.625rem',
+            },
+            spacing: {
+                '35': '35.813rem',
+                '41': '41px',
             },
             transitionDuration: {
                 250: '250ms',

@@ -4,9 +4,10 @@ import styled from 'styled-components/macro';
 import { breakpoint } from '@/theme';
 import FlashMessageRender from '@/components/FlashMessageRender';
 import tw from 'twin.macro';
+import { Link } from 'react-router-dom';
 
 type Props = React.DetailedHTMLProps<React.FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> & {
-    title?: string;
+  title?: string;
 }
 
 const Container = styled.div`
@@ -29,33 +30,40 @@ const Container = styled.div`
 `;
 
 export default forwardRef<HTMLFormElement, Props>(({ title, ...props }, ref) => (
-    <Container>
-        {title &&
-        <h2 css={tw`text-3xl text-center text-neutral-100 font-medium py-4`}>
-            {title}
-        </h2>
-        }
-        <FlashMessageRender css={tw`mb-2 px-1`}/>
-        <Form {...props} ref={ref}>
-            <div css={tw`md:flex w-full bg-white shadow-lg rounded-lg p-6 md:pl-0 mx-1`}>
-                <div css={tw`flex-none select-none mb-6 md:mb-0 self-center`}>
-                    <img src={'/assets/svgs/pterodactyl.svg'} css={tw`block w-48 md:w-64 mx-auto`}/>
-                </div>
-                <div css={tw`flex-1`}>
-                    {props.children}
-                </div>
-            </div>
-        </Form>
-        <p css={tw`text-center text-neutral-500 text-xs mt-4`}>
-            &copy; 2015 - {(new Date()).getFullYear()}&nbsp;
-            <a
-                rel={'noopener nofollow noreferrer'}
-                href={'https://pterodactyl.io'}
-                target={'_blank'}
-                css={tw`no-underline text-neutral-500 hover:text-neutral-300`}
-            >
-                Pterodactyl Software
-            </a>
-        </p>
-    </Container>
+  <Container css={tw`mt-16`}>
+    <FlashMessageRender css={tw`mb-2 px-1`} />
+    <Form {...props} ref={ref}>
+      <div css={tw`md:flex w-full bg-transparent rounded-lg p-6 mx-1`}>
+        <div css={tw`flex-1`}>
+          {props.children}
+        </div>
+      </div>
+    </Form>
+    <p css={tw`text-center text-neutral-500 text-xs`}>
+      {location.pathname.startsWith('/auth/login') &&
+        <Link
+          to={'/auth/password'}
+          css={tw`no-underline text-white hover:text-neutral-300`}
+        >
+          [i] Click here if you forgot your password :/
+            </Link>
+      }
+      {location.pathname.startsWith('/auth/password') &&
+        <Link
+          to={'/auth/login'}
+          css={tw`no-underline text-white hover:text-neutral-300`}
+        >
+          [i] Click here to return back to the login page
+              </Link>
+      }
+    </p>
+    <div css={tw`flex justify-center w-full`}>
+      <img src="https://media.discordapp.net/attachments/596792232313487360/853498688185565184/unknown.png" />
+    </div>
+    <p css={tw`text-center text-neutral-500 text-xs mt-4`}>
+      <p css={tw`no-underline text-neutral-500`}>
+        © 2021 Game Hosting - Private Game Panel - Pterodactyl Software
+          </p>
+    </p>
+  </Container>
 ));

@@ -62,6 +62,7 @@ export default () => {
     };
 
     return (
+    <>
         <Formik
             onSubmit={handleSubmission}
             initialValues={{ email: '' }}
@@ -75,10 +76,23 @@ export default () => {
                     title={'Request Password Reset'}
                     css={tw`w-full flex`}
                 >
+                <div css={tw`pb-2 flex justify-center`}>
+                <h1 css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
+                </div>
+                <div css={tw`pb-2 flex justify-center`}>
+                <p css={tw`w-full text-sm text-center text-red-600`}>Request a password reset for your account</p>
+                </div>
+                <div css={tw`pb-6 flex justify-center`}>
+                <p css={tw`w-full text-xs text-center text-white`}>Enter the email address associated with your accountto receive instructions on how to reset your password.</p>
+                </div>
+                <div css={tw`pb-2 flex justify-center`}>
+                <p css={tw`w-full text-xs text-center text-white`}>Make sure to check your spam box!</p>
+                </div>
                     <Field
                         light
+                        css={tw`h-41`}
+                        placeholder={'> enter your email address...'}
                         label={'Email'}
-                        description={'Enter your account email address to receive instructions on resetting your password.'}
                         name={'email'}
                         type={'email'}
                     />
@@ -107,16 +121,9 @@ export default () => {
                         }}
                     />
                     }
-                    <div css={tw`mt-6 text-center`}>
-                        <Link
-                            to={'/auth/login'}
-                            css={tw`text-xs text-neutral-500 tracking-wide uppercase no-underline hover:text-neutral-700`}
-                        >
-                            Return to Login
-                        </Link>
-                    </div>
                 </LoginFormContainer>
             )}
         </Formik>
+      </>
     );
 };

@@ -74,9 +74,17 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
             })}
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
-                <LoginFormContainer title={'Login to Continue'} css={tw`w-full flex`}>
+                <LoginFormContainer title={''} css={tw`w-full flex`}>
+                <div css={tw`pb-2 flex justify-center`}>
+                <h1 css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
+                </div>
+                <div css={tw`pb-6 flex justify-center`}>
+                <p css={tw`w-full text-sm text-center text-red-600`}>Login to the Private Game Panel (PGP)</p>
+                </div>
                     <Field
                         light
+                        css={tw`h-41`}
+                        placeholder={'> enter your email address...'}
                         type={'text'}
                         label={'Username or Email'}
                         name={'username'}
@@ -85,17 +93,21 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                     <div css={tw`mt-6`}>
                         <Field
                             light
+                            css={tw`h-41`}
+                            placeholder={'> enter your password...'}
                             type={'password'}
                             label={'Password'}
                             name={'password'}
                             disabled={isSubmitting}
                         />
                     </div>
-                    <div css={tw`mt-6`}>
+                  <div css={tw`w-full flex justify-center`}>
+                    <div className="LoginButton" css={tw`w-35 mt-6`}>
                         <Button type={'submit'} size={'xlarge'} isLoading={isSubmitting} disabled={isSubmitting}>
-                            Login
+                            [i] LOGIN TO PGP
                         </Button>
                     </div>
+                  </div>
                     {recaptchaEnabled &&
                     <Reaptcha
                         ref={ref}
@@ -111,14 +123,6 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                         }}
                     />
                     }
-                    <div css={tw`mt-6 text-center`}>
-                        <Link
-                            to={'/auth/password'}
-                            css={tw`text-xs text-neutral-500 tracking-wide no-underline uppercase hover:text-neutral-600`}
-                        >
-                            Forgot password?
-                        </Link>
-                    </div>
                 </LoginFormContainer>
             )}
         </Formik>
