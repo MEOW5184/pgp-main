@@ -75,10 +75,10 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
                 <LoginFormContainer title={''} css={tw`w-full flex`}>
-                <div css={tw`pb-2 flex justify-center`}>
+                <div css={tw`w-35 pb-2 flex justify-center`}>
                 <h1 className="roboto condensed text24" css={tw`w-full text-white text-2xl text-center`}>[i] Private Game Panel</h1>
                 </div>
-                <div css={tw`pb-6 flex justify-center`}>
+                <div css={tw`w-35 pb-6 flex justify-center`}>
                 <p className="roboto condensed text16" css={tw`w-full text-sm text-center text-red-905`}>Login to the Private Game Panel (PGP)</p>
                 </div>
                     <Field
@@ -95,7 +95,7 @@ const LoginContainer = ({ history }: RouteComponentProps) => {
                         <Field
                             light
                             className="text18"
-                            css={tw`h-41`}
+                            css={tw`h-41 w-35`}
                             placeholder={'> enter your password...'}
                             type={'password'}
                             label={'[i] Password'}
