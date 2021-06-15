@@ -8,7 +8,7 @@ export interface Props {
 
 const light = css<Props>`
     ${tw`bg-neutral-915 border-t-0 border-r-0 border-l-0 border-b-2 border-transparent text-white`};
-    &:focus { ${tw`border-b-2 border-t-0 border-l-0 border-r-0 border-yellow-915`} }
+    &:focus { ${tw`border-yellow-915`} }
 
     &:disabled {
         ${tw`bg-neutral-915 border-white`};
@@ -22,15 +22,13 @@ const checkboxStyle = css<Props>`
     transition: all 75ms linear, box-shadow 25ms linear;
 
     &:checked {
-        ${tw`border-transparent bg-no-repeat bg-center`};
-        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
-        background-color: currentColor;
-        background-size: 100% 100%;
-    }
+      ${tw`bg-yellow-915 border-transparent bg-no-repeat bg-center`};
+      background-size: 100% 100%;
+  }
 
     &:focus {
-        ${tw`outline-none border-primary-300`};
-        box-shadow: 0 0 0 1px rgba(9, 103, 210, 0.25);
+        ${tw`outline-none border-yellow-915`};
+        box-shadow: 0 0 0 1px rgba(253, 236, 186, 45%);
     }
 `;
 
@@ -51,7 +49,7 @@ const inputStyle = css<Props>`
     }
 
     &:not(:disabled):not(:read-only):focus {
-        ${tw`shadow-md border-primary-300 ring-2 ring-primary-400 ring-opacity-50`};
+        ${tw`shadow-md border-yellow-915`};
         ${props => props.hasError && tw`border-red-300 ring-red-200`};
     }
 
